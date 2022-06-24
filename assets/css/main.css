@@ -733,13 +733,15 @@ input, select, textarea {
 		}
 
 	ul {
-		list-style: disc;
+		list-style: none;
 		margin: 0 0 2rem 0;
-		padding-left: 1em;
+		padding-left: 0;
+		
 	}
 
 		ul li {
 			padding-left: 0.5em;
+			padding-top: 0.5em;
 		}
 
 		ul.alt {
@@ -749,11 +751,11 @@ input, select, textarea {
 
 			ul.alt li {
 				border-top: solid 1px #ffffff;
-				padding: 0.5em 0;
+				padding: 0.5em 0.5em 0.5em 0.5em;
 			}
 
 				ul.alt li:first-child {
-					border-top: 0;
+					border-top: 0.5em;
 					padding-top: 0;
 				}
 
