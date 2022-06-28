@@ -404,6 +404,7 @@
 function buildingChange(){
 	var building = document.getElementById("building");
 	
+
 	var floor = document.getElementById("floor");
 	removeAllChildNodes(floor);
 	

@@ -42,6 +42,8 @@
 						<!-- Help -->
 						<article id="help">
 							<h2 class="major">Where are you </br> located?</h2>
+						
+						<ul>
 							
 						<ul class="actions">
 							<li ><a class="button icon solid fa-house-circle-exclamation"  
@@ -55,6 +57,7 @@
 						</ul>
 							<p></p>
 						<ul class="actions" >
+								
 							  <h2 id=hh style="visibility:hidden;"    >Koch HQ:   </h2>
 								<li>
 									<select title="building"  id="building" style="visibility:hidden;" onchange="buildingChange()">
@@ -71,7 +74,9 @@
 							  		</select>
 								</li>
 							  <li><select title="floor" id="floor" style="visibility:hidden;"></select></li>
-							  <li><a id="submit" class="button icon solid fa-check" style="visibility:hidden;">Submit</a></li>
+							  
+							  <li><a id="submit" class="button icon solid fa-check" style="visibility:hidden;" onclick="updateTable()" href="#onWay">Submit</a></li>
+
 						
 				
 					</ul>
@@ -90,26 +95,33 @@
 
 						<!-- Dashboard-->
 							<article id="dash">
+								
 								<h2 class="major">Employee Status</h2>
-								<table>
+								<table id="table">
 									<tr>
 										<th>Employee Name</th>
 										<th>Status</th>
 									</tr>
 									<tr>
-										<td>Mason Lumley</td>
+										<td id="x">Mason Lumley</td>
 										<td><span>Unknown</span></td>
 									</tr>
 									<tr>
-										<td>Logan Tumminello</td>
+										<td id="y">Logan Tumminello</td>
 										<td><span>Unknown</span></td>
 									</tr>
 									<tr>
-										<td>Jonathan Schoelwer</td>
+										<td id="z">Jonathan Schoelwer</td>
 										<td><span>Unknown</span></td>
 									</tr>
 								</table>
 							</article>
+
+						<!-- Safe -->
+						<article id="onWay">
+							<h2 class="minor">Help Is On The Way!</h2>
+						</article>
+
 						<!-- A -->
 							<article id="a">
 								<h2 class="major">What Floor?</h2>
@@ -215,6 +227,7 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			
 
 	</body>
 </html>
