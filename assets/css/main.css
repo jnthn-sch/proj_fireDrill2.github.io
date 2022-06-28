@@ -1125,6 +1125,7 @@ input, select, textarea {
 
 		#bg:before, #bg:after {
 			content: '';
+			background-color: #4696e5;
 			display: block;
 			position: absolute;
 			top: 0;
