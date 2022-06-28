@@ -399,3 +399,36 @@
 					});
 
 })(jQuery);
+
+
+function buildingChange(){
+	var building = document.getElementById("building");
+	
+	var floor = document.getElementById("floor");
+	removeAllChildNodes(floor);
+	
+	var LL = document.createElement('option');
+	LL.append('LL');
+	floor.appendChild(LL);
+
+	var flLimit;
+
+	if(building.value == 'Tower'){flLimit = 9;}
+	else{flLimit = 4;}
+
+
+	for(var i = 1; i < flLimit; i++){
+		var fl = document.createElement('option');
+		fl.append(i.toString());
+		floor.appendChild(fl);
+	}
+
+	
+}
+
+
+function removeAllChildNodes(parent) {
+    while (parent.firstChild) {
+        parent.removeChild(parent.firstChild);
+    }
+}
