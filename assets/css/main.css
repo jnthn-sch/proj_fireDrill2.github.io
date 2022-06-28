@@ -1113,6 +1113,7 @@ input, select, textarea {
 		-webkit-transform: scale(1.0);
 		-ms-transform: scale(1.0);
 		transform: scale(1.0);
+		backface-visibility: inherit;
 		-webkit-backface-visibility: hidden;
 		position: fixed;
 		top: 0;
