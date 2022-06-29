@@ -494,7 +494,7 @@ function updateJSON(){
     		jsonArr.push({"Location":"unknown","name":"Cody", "status":"Safe"});
 
    			xhr.open("POST", jsonRequestURL, true);
-			//xhr.setRequestHeader("Accept", "application/json");
+			xhr.setRequestHeader("Accept", "application/json");
 			xhr.setRequestHeader("Content-Type", "application/json");
     		xhr.send("jsonTxt="+JSON.stringify(jsonArr));
 			useXHR();
