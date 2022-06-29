@@ -487,10 +487,11 @@ function updateJSON(){
     jsonArr,
     method = "GET",
     jsonRequestURL = "jsons/status.json";
-
+	
+	xhr.open(method, jsonRequestURL, true);
 	xhr.onreadystatechange = function()
 	{
-		xhr.open(method, jsonRequestURL, true);
+		
 	//TODO 
 
 
