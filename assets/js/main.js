@@ -485,32 +485,20 @@ function updateJSON(){
 
 	var xhr = new XMLHttpRequest();
     var jsonRequestURL = "jsons/status.json";
-	xhr.open("GET", jsonRequestURL);
-	xhr.addEventListener('load', ()=>{
-		if(xhr.readyState == 4 && xhr.status == 200)
-   		 {
-			jsonArr = JSON.parse(xhr.responseText);
-
-    		jsonArr.push({"name":"Cody", "status":"Safe"});
-
-   			xhr.open("POST", jsonRequestURL, true);
-			xhr.setRequestHeader("Accept", "application/json");
-			xhr.setRequestHeader("Content-Type", "application/json");
-    		xhr.send("jsonTxt="+JSON.stringify(jsonArr));
-			useXHR();
-		}
-	});
-	
-
-	
-	xhr.send();
-
-
 	
 	
-	
+		
+	jsonArr = JSON.parse(xhr.responseText);
 
-	
+    jsonArr.push({"name":"Cody", "status":"Safe"});
+
+   	xhr.open("POST", jsonRequestURL, true);
+	xhr.setRequestHeader("Accept", "application/json");
+	xhr.setRequestHeader("Content-Type", "application/json");
+    xhr.send("jsonTxt="+JSON.stringify(jsonArr));
+	useXHR();
+		
+
 }
 
 useXHR();
