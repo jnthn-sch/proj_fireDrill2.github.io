@@ -464,7 +464,7 @@ function useXHR(){
 
 	});
 
-	const url = "./status.json";
+	const url = "jsons/status.json";
 	xhr.open("GET",url);
 	xhr.send();
 
