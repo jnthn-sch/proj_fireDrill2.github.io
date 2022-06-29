@@ -443,6 +443,8 @@ function updateStatus(data){
 	var title2 = document.createElement("th");
 	title1.textContent = "Employee Name";
 	title2.textContent = "Status";
+	display.appendChild(title1);
+	display.appendChild(title2);
 	for (let i = 0; i < data.length; ++i){
 
 		var current = data[i];
