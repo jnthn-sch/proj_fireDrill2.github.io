@@ -480,4 +480,34 @@ function useXHR(){
 
 }
 
+
+function updateJSON(){
+
+	var xhr = new XMLHttpRequest(),
+    jsonArr,
+    method = "GET",
+    jsonRequestURL = "jsons/status.json";
+
+	xhr.onreadystatechange = function()
+	{
+		xhr.open(method, jsonRequestURL, true);
+	//TODO 
+
+
+		jsonArr = JSON.parse(xhr.responseText);
+
+    	jsonArr.push({"name": "Cody", "status": "Safe"});
+
+   		 xhr.open("POST", jsonRequestURL, true);
+
+
+    	xhr.send("jsonTxt="+JSON.stringify(jsonArr));
+
+	};
+	xhr.send(null);
+
+
+	
+}
+
 useXHR();
