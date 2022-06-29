@@ -480,4 +480,18 @@ function useXHR(){
 
 }
 
+
+function updateJSON(){
+
+	const xhr = new XMLHttpRequest();
+	//TODO 
+	//Parse JSON and figure out how to push to local element
+
+
+	const url = "jsons/status.json";
+	//See if github pages gives POST permission
+
+	xhr.send();
+}
+
 useXHR();
