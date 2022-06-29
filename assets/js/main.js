@@ -497,6 +497,7 @@ function updateJSON(){
 
 			xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     		xhr.send("jsonTxt="+JSON.stringify(jsonArr));
+			useXHR();
 		}
 	});
 	var jsonRequestURL = "jsons/status.json";
