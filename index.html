@@ -24,7 +24,7 @@
 						<div class="content">
 							<div class="inner">
 								<h1>ALERT</h1>
-								<h2>Please Select Below if </br> You Need Help</h2>
+								<h2>Please Select Below</br>if You Need Help</h2>
 							</div>
 						</div>
 						<nav>
@@ -43,10 +43,17 @@
 						<!-- Help -->
 						<article id="help">
 							<h2 class="major">Where are you </br> located?</h2>
-						
+							<h3>What is your name?</h3>
+									<select title="userName" id="userName">
+										<option value="nothing"> </option>
+										<option value="lumleyMason"> Mason Lumley</option>
+										<option value="tumminelloLogan"> Logan Tumminello</option>
+										<option value="schoelwerJonathan"> Jonathan Schoelwer</option>
+									</select>
 						<ul>
 							
 						<ul class="actions">
+							
 							<li ><a class="button icon solid fa-house-circle-exclamation"  
 									onclick="building.style.visibility='hidden'; floor.style.visibility='hidden'; submit.style.visibility='hidden'; hh.style.visibility='hidden';">
 									I'm working remote
@@ -74,8 +81,9 @@
 										<option value="H">H</option>
 							  		</select>
 								</li>
-							  <li><select title="floor" id="floor" style="visibility:hidden;"></select></li>
-							  <li><a id="submit" class="button1 icon solid fa-check" style="visibility:hidden;" onclick="updateTable()" href="#onWay" >Submit</a></li>
+								<li><select title="floor" id="floor" style="visibility:hidden;"></select></li>
+								
+								<li><a id="submit" class="button1 icon solid fa-check" style="visibility:hidden;" onclick="updateTable()" href="#onWay" >Submit</a></li>
 
 						
 				
