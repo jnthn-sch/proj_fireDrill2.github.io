@@ -433,3 +433,44 @@ function removeAllChildNodes(parent) {
         parent.removeChild(parent.firstChild);
     }
 }
+
+
+function updateStatus(data){
+
+
+	for (let i = 0; i < data.length; ++i){
+
+		var current = data[i];
+		var display = document.getElementById("table");
+		var tar = document.createElement("tr");
+		var spn = document.createElement("span");
+
+		var name = document.createElement("th");
+		name.textContent = current.name;
+
+		var status = document.createElement("th");
+		spn.textContent = current.status;
+
+		status.append(spn);
+		tar.appendChild(name);
+		tar.appendChild(status);
+		display.classList.add("table");
+		display.appendChild(tar);
+	}
+}
+
+function useXHR(){
+
+	const xhr = new XMLHttpRequest();
+	xhr.addEventListener('load', ()=>{
+		updateStatus(JSON.parse(xhr.responseText));
+
+	});
+
+	const url = "jsons/status.json";
+	xhr.open("GET",url);
+	xhr.send();
+
+}
+
+useXHR();
