@@ -484,8 +484,8 @@ function useXHR(){
 function updateJSON(){
 
 	var xhr = new XMLHttpRequest();
-    
-   
+    var jsonRequestURL = "jsons/status.json";
+	xhr.open("GET", jsonRequestURL);
 	xhr.addEventListener('load', ()=>{
 		if(xhr.readyState == 4 && xhr.status == 200)
    		 {
@@ -500,9 +500,9 @@ function updateJSON(){
 			useXHR();
 		}
 	});
-	var jsonRequestURL = "jsons/status.json";
+	
 
-	xhr.open("GET", jsonRequestURL);
+	
 	xhr.send();
 
 
