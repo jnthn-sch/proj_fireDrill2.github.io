@@ -435,7 +435,7 @@ function removeAllChildNodes(parent) {
 }
 
 
-function updateStatus(){
+function updateStatus(data){
 
 
 	for (let i = 0; i < data.length; ++i){
@@ -459,14 +459,15 @@ function updateStatus(){
 function useXHR(){
 
 	const xhr = new XMLHttpRequest();
-	
-		
+	xhr.addEventListener('load', ()=>{
+		updateStatus(JSON.parse(xhr.responseText));
 
-	
+	});
 
 	const url = "./status.json";
 	xhr.open("GET",url);
 	xhr.send();
-	updateStatus(JSON.parse(xhr.responseText));
+
 }
 
+useXHR();
