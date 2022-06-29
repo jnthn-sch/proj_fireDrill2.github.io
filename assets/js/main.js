@@ -490,7 +490,7 @@ function updateJSON(){
 		if(xhr.readyState == 4 && xhr.status == 200)
    		 {
 			jsonArr = JSON.parse(xhr.responseText);
-			xhr.send();
+
     		jsonArr.push({"name":"Cody", "status":"Safe"});
 
    			xhr.open("POST", jsonRequestURL, true);
@@ -503,7 +503,7 @@ function updateJSON(){
 	
 
 	
-	
+	xhr.send(null);
 
 
 	
