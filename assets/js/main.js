@@ -491,11 +491,11 @@ function updateJSON(){
    		 {
 			jsonArr = JSON.parse(xhr.responseText);
 
-    		jsonArr.push({"name": "Cody", "status": "Safe"});
+    		jsonArr.push({"name":"Cody", "status":"Safe"});
 
    			xhr.open("POST", jsonRequestURL, true);
-
-			xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+			xhr.setRequestHeader("Accept", "application/json");
+			xhr.setRequestHeader("Content-Type", "application/json");
     		xhr.send("jsonTxt="+JSON.stringify(jsonArr));
 			useXHR();
 		}
