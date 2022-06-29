@@ -487,7 +487,7 @@ function updateJSON(){
     jsonArr,
     method = "GET",
     jsonRequestURL = "jsons/status.json";
-	
+
 	xhr.open(method, jsonRequestURL, true);
 	xhr.onreadystatechange = function()
 	{
@@ -501,7 +501,7 @@ function updateJSON(){
 
    		 xhr.open("POST", jsonRequestURL, true);
 
-
+			xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     	xhr.send("jsonTxt="+JSON.stringify(jsonArr));
 
 	};
