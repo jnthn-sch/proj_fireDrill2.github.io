@@ -443,12 +443,15 @@ function updateStatus(data){
 		var current = data[i];
 		var display = document.getElementById("table");
 		var tar = document.createElement("tr");
+		var spn = document.createElement("span");
 
 		var name = document.createElement("th");
 		name.textContent = current.name;
 
 		var status = document.createElement("th");
-		status.textContent = current.status;
+		spn.textContent = current.status;
+
+		status.append(spn);
 		tar.appendChild(name);
 		tar.appendChild(status);
 		display.classList.add("table");
