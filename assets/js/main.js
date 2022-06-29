@@ -4,6 +4,18 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+exports.handler = async (event, context) => {
+	return {
+	  statusCode: 200,
+	  headers: {
+		/* Required for CORS support to work */
+		'Access-Control-Allow-Origin': '*',
+		/* Required for cookies, authorization headers with HTTPS */
+		'Access-Control-Allow-Credentials': true
+	  }
+	}
+}
+
 (function($) {
 
 	var	$window = $(window),
@@ -480,21 +492,6 @@ function useXHR(){
 
 }
 
-export async function handler(event, context) {
-    return {
-      statusCode: 200,
-      headers: {
-        /* Required for CORS support to work */
-        'Access-Control-Allow-Origin': '*',
-        /* Required for cookies, authorization headers with HTTPS */
-        'Access-Control-Allow-Credentials': true
-      },
-      body: JSON.stringify({
-        message: 'Hi ⊂◉‿◉つ',
-        event: event,
-      })
-    }
-  }
 
 function updateJSON(){
 
@@ -505,8 +502,7 @@ function updateJSON(){
 		if(xhr.readyState == 4 && xhr.status == 200)
    		 {
 			jsonArr = JSON.parse(xhr.responseText);
-
-		
+				
 
     		jsonArr.push({"Location":"unknown","name":"Cody", "status":"Safe"});
 			
