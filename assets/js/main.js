@@ -437,18 +437,23 @@ function removeAllChildNodes(parent) {
 
 function updateStatus(data){
 
-
+	var display = document.getElementById("table");
+	removeAllChildNodes(display);
+	var title1 = document.createElement("th");
+	var title2 = document.createElement("th");
+	title1.textContent = "Employee Name";
+	title2.textContent = "Status";
 	for (let i = 0; i < data.length; ++i){
 
 		var current = data[i];
-		var display = document.getElementById("table");
+		
 		var tar = document.createElement("tr");
 		var spn = document.createElement("span");
 
-		var name = document.createElement("th");
+		var name = document.createElement("td");
 		name.textContent = current.name;
 
-		var status = document.createElement("th");
+		var status = document.createElement("td");
 		spn.textContent = current.status;
 
 		status.append(spn);
