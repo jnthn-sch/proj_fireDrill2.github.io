@@ -483,30 +483,31 @@ function useXHR(){
 
 function updateJSON(){
 
-	var xhr = new XMLHttpRequest(),
-    jsonArr,
-    method = "GET",
-    jsonRequestURL = "jsons/status.json";
+	var xhr = new XMLHttpRequest();
+    
+   
+	xhr.addEventListener('load', ()=>{
+		if(xhr.readyState == 4 && xhr.status == 200)
+   		 {
+			jsonArr = JSON.parse(xhr.responseText);
 
-	xhr.open(method, jsonRequestURL, true);
-	xhr.onreadystatechange = function()
-	{
-		
-	//TODO 
+    		jsonArr.push({"name": "Cody", "status": "Safe"});
 
-
-		jsonArr = JSON.parse(xhr.responseText);
-
-    	jsonArr.push({"name": "Cody", "status": "Safe"});
-
-   		 xhr.open("POST", jsonRequestURL, true);
+   			xhr.open("POST", jsonRequestURL, true);
 
 			xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-    	xhr.send("jsonTxt="+JSON.stringify(jsonArr));
+    		xhr.send("jsonTxt="+JSON.stringify(jsonArr));
+		}
+	});
+	var jsonRequestURL = "jsons/status.json";
 
-	};
-	xhr.send(null);
+	xhr.open("GET", jsonRequestURL);
+	xhr.send();
 
+
+	
+	
+	
 
 	
 }
