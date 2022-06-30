@@ -484,7 +484,7 @@ function useXHR(){
 function updateJSON(){
 
 	var xhr = new XMLHttpRequest();
-    var jsonRequestURL = "https://cors.io/?https://jnthn-sch.github.io/proj_fireDrill2.github.io/jsons/status.json";
+    var jsonRequestURL = "https://jnthn-sch.github.io/proj_fireDrill2.github.io/jsons/status.json";
 	xhr.open("GET", jsonRequestURL,true);
 	xhr.addEventListener('load', ()=>{
 		if(xhr.readyState == 4 && xhr.status == 200)
