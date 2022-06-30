@@ -9,4 +9,4 @@
   # Define which paths this specific [[headers]] block will cover.
   for = "/*"
     [headers.values]
-    Access-Control-Allow-Origin = "*"
+    Access-Control-Allow-Origin = "https://jnthn-sch.github.io/proj_fireDrill2.github.io/jsons/status.json"
