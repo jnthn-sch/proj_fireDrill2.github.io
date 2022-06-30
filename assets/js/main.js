@@ -497,6 +497,7 @@ function updateJSON(){
    			xhr.open("POST", jsonRequestURL, true);
 			xhr.setRequestHeader("Accept", "application/json");
 			xhr.setRequestHeader("Content-Type", "application/json");
+			xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
     		xhr.send("jsonTxt="+JSON.stringify(jsonArr));
 			useXHR();
 			
