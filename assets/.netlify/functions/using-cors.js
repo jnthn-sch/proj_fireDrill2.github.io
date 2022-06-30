@@ -7,9 +7,6 @@ exports.handler = async (event, context) => {
         /* Required for cookies, authorization headers with HTTPS */
         'Access-Control-Allow-Credentials': true
       },
-      body: JSON.stringify({
-        message: 'Hi ⊂◉‿◉つ',
-        event: event,
-      })
+      
     }
   }
