@@ -10,3 +10,4 @@
   for = "/*"
     [headers.values]
     Access-Control-Allow-Origin = "https://jnthn-sch.github.io/proj_fireDrill2.github.io/"
+    Access-Control-Allow-Methods = "POST, OPTIONS"
