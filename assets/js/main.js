@@ -494,7 +494,7 @@ function updateJSON(){
 			jsonArr.push({"Location":"unknown","name":"Cody", "status":"Safe"});
 			
 			
-   			xhr.open("POST", jsonRequestURL, true);
+   			/*xhr.open("POST", jsonRequestURL, true);
 			xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest'); 
 			xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
     		xhr.setRequestHeader('Access-Control-Allow-Methods' , 'POST, OPTIONS')
@@ -504,12 +504,22 @@ function updateJSON(){
 			return {
 				statusCode: 200,
 				headers: {
-				  /* Required for CORS support to work */
+				  // Required for CORS support to work
 				  'Access-Control-Allow-Origin': '*',
-				  /* Required for cookies, authorization headers with HTTPS */
+				  // Required for cookies, authorization headers with HTTPS 
 				  'Access-Control-Allow-Credentials': true
 				}
-			}
+
+
+			}*/
+			fetch('https://jnthn-sch.github.io/proj_fireDrill2.github.io/jsons/status.json?access_token=e72e16c7e42f292c6912e7710c838347ae178b4a', {
+     		 method: 'post',
+     		 body: {
+       		 title: 'Title',
+        	body: '"jsonTxt="+JSON.stringify(jsonArr)'
+     		 }
+    })
+			
 		}
 	}
 	);
