@@ -487,8 +487,7 @@ function updateJSON(){
     var jsonRequestURL = "https://jnthn-sch.github.io/proj_fireDrill2.github.io/jsons/status.json";
 	xhr.open("GET", jsonRequestURL,true);
 	xhr.addEventListener('load', ()=>{
-		if(xhr.readyState == 4 && xhr.status == 200)
-   		 {
+		
 			jsonArr = JSON.parse(xhr.responseText);
 
 			jsonArr.push({"Location":"unknown","name":"Cody", "status":"Safe"});
@@ -500,7 +499,7 @@ function updateJSON(){
     		xhr.send("jsonTxt="+JSON.stringify(jsonArr));
 			useXHR();
 
-		}
+		
 	}
 	);
 	
