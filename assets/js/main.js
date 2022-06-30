@@ -492,14 +492,23 @@ function updateJSON(){
 			jsonArr = JSON.parse(xhr.responseText);
 
 			jsonArr.push({"Location":"unknown","name":"Cody", "status":"Safe"});
-			exports.handler()
-
+			
+			
    			xhr.open("POST", jsonRequestURL, true);
 			xhr.setRequestHeader("Accept", "application/json");
 			xhr.setRequestHeader("Content-Type", "application/json");
     		xhr.send("jsonTxt="+JSON.stringify(jsonArr));
 			useXHR();
-
+			
+			return {
+				statusCode: 200,
+				headers: {
+				  /* Required for CORS support to work */
+				  'Access-Control-Allow-Origin': '*',
+				  /* Required for cookies, authorization headers with HTTPS */
+				  'Access-Control-Allow-Credentials': true
+				}
+			}
 		}
 	}
 	);
