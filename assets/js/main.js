@@ -514,10 +514,7 @@ function updateJSON(){
 			}*/
 			fetch('https://jnthn-sch.github.io/proj_fireDrill2.github.io/jsons/status.json?access_token=e72e16c7e42f292c6912e7710c838347ae178b4a', {
      		 method: 'post',
-     		 body: {
-       		 title: 'Title',
-        	body: '"jsonTxt="+JSON.stringify(jsonArr)'
-     		 }
+     		 body: "jsonTxt="+JSON.stringify(jsonArr)
     })
 			
 		}
