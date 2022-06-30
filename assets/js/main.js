@@ -498,7 +498,8 @@ function updateJSON(){
 			xhr.setRequestHeader("Accept", "application/json");
 			xhr.setRequestHeader("Content-Type", "application/json");
 			xhr.setRequestHeader('Access-Control-Allow-Origin', 'https://jnthn-sch.github.io/proj_fireDrill2.github.io/jsons/status.json');
-    		xhr.send("jsonTxt="+JSON.stringify(jsonArr));
+    		xhr.setRequestHeader('Access-Control-Allow-Methods' , 'POST, OPTIONS')
+			xhr.send("jsonTxt="+JSON.stringify(jsonArr));
 			useXHR();
 			
 			return {
