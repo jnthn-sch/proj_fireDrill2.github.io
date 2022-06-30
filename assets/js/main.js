@@ -515,7 +515,7 @@ function updateJSON(){
 			fetch('https://jnthn-sch.github.io/proj_fireDrill2.github.io/jsons/status.json?access_token=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', {
      		 method: 'post',
      		 body: "jsonTxt="+JSON.stringify(jsonArr),
-			headers: {"Authorization": "token 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"}
+			headers: {"Authorization": "token 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",'Content-Type': 'application/json'}
     }).then(response => response.json())
 	.then(data => {
 	  console.log(data) // Prints result from `response.json()` in getRequest
