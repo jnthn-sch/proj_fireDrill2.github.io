@@ -516,7 +516,11 @@ function updateJSON(){
      		 method: 'post',
      		 body: "jsonTxt="+JSON.stringify(jsonArr),
 			headers: {"Authorization": "token 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"}
-    })
+    }).then(response => response.json())
+	.then(data => {
+	  console.log(data) // Prints result from `response.json()` in getRequest
+	})
+	.catch(error => console.error(error))
 			
 		}
 	}
