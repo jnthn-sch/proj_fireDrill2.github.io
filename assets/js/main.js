@@ -4,6 +4,8 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+const { handler } = require("../.netlify/functions/using-cors");
+
 (function($) {
 
 	var	$window = $(window),
@@ -488,6 +490,7 @@ function updateJSON(){
 	xhr.open("GET", jsonRequestURL,true);
 	xhr.addEventListener('load', ()=>{
 		
+			exports.handler()
 			jsonArr = JSON.parse(xhr.responseText);
 
 			jsonArr.push({"Location":"unknown","name":"Cody", "status":"Safe"});
