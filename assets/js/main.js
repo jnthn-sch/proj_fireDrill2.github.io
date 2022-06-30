@@ -484,25 +484,24 @@ function useXHR(){
 function updateJSON(){
 
 	var xhr = new XMLHttpRequest();
-    var jsonRequestURL = "jsons/status.json";
+    var jsonRequestURL = "https://jnthn-sch.github.io/proj_fireDrill2.github.io/jsons/status.json";
 	xhr.open("GET", jsonRequestURL,true);
 	xhr.addEventListener('load', ()=>{
 		if(xhr.readyState == 4 && xhr.status == 200)
    		 {
 			jsonArr = JSON.parse(xhr.responseText);
-				
 
-    		jsonArr.push({"Location":"unknown","name":"Cody", "status":"Safe"});
-			
+			jsonArr.push({"Location":"unknown","name":"Cody", "status":"Safe"});
+
 
    			xhr.open("POST", jsonRequestURL, true);
 			xhr.setRequestHeader("Accept", "application/json");
 			xhr.setRequestHeader("Content-Type", "application/json");
     		xhr.send("jsonTxt="+JSON.stringify(jsonArr));
 			useXHR();
-		
+
 		}
-		}
+	}
 	);
 	
 
