@@ -491,7 +491,7 @@ function updateJSON(){
    		 {
 			jsonArr = JSON.parse(xhr.responseText);
 
-			jsonArr.push({"Location":"unknown","name":"Cody", "status":"Safe"});
+			jsonArr.push({"name":"Cody", "status":"Safe"});
 			
 			
    			/*xhr.open("POST", jsonRequestURL, true);
