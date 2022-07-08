@@ -410,6 +410,10 @@ function buildingChange(){
 
 	var quad = document.getElementById("quad");
 	removeAllChildNodes(quad);
+
+	var q = document.createElement('option');
+	q.append('Quadrant');
+	quad.appendChild(q);
 	
 	var idk = document.createElement('option');
 	idk.append('unsure');
