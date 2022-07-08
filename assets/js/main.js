@@ -413,19 +413,19 @@ function buildingChange(){
 	
 	var idk = document.createElement('idk');
 	idk.append('idk');
-	quad.append(idk);
+	quad.appendChild(idk);
 	var NW = document.createElement('NW');
 	idk.append('NW');
-	quad.append(NW);
+	quad.appendChild(NW);
 	var NE = document.createElement('NE');
 	idk.append('NE');
-	quad.append(NE);
+	quad.appendChild(NE);
 	var SW = document.createElement('SW');
 	idk.append('SW');
-	quad.append(SW);
+	quad.appendChild(SW);
 	var SE =document.createElement('SE');
 	idk.append('SW');
-	quad.append(SW);
+	quad.appendChild(SW);
 
 
 	var LL = document.createElement('option');
