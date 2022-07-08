@@ -1,8 +1,8 @@
 [
     {
         "name":"Jonathan Schoelwer",
-        "status":"Unknown",
-        "location":"Unknown"
+        "status":"Safe",
+        "location":"Virtual"
         
     },
     {
@@ -13,8 +13,8 @@
     },
     {
         "name":"Mason Lumley",
-        "status":"Unknown",
-        "location":"Unknown"
+        "status":"Needs Help",
+        "location":"Virtual"
 
     }
 ]
