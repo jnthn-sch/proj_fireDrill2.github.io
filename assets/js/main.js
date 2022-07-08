@@ -411,20 +411,20 @@ function buildingChange(){
 	var quad = document.getElementById("quad");
 	removeAllChildNodes(quad);
 	
-	var idk = document.createElement('idk');
+	var idk = document.createElement('option');
 	idk.append('idk');
 	quad.appendChild(idk);
-	var NW = document.createElement('NW');
-	idk.append('NW');
+	var NW = document.createElement('option');
+	NW.append('NW');
 	quad.appendChild(NW);
-	var NE = document.createElement('NE');
-	idk.append('NE');
+	var NE = document.createElement('option');
+	NE.append('NE');
 	quad.appendChild(NE);
-	var SW = document.createElement('SW');
-	idk.append('SW');
+	var SW = document.createElement('option');
+	SW.append('SW');
 	quad.appendChild(SW);
-	var SE =document.createElement('SE');
-	idk.append('SW');
+	var SE =document.createElement('option');
+	SE.append('SW');
 	quad.appendChild(SW);
 
 
