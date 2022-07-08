@@ -483,11 +483,15 @@ function updateStatus(data){
 		name.textContent = current.name;
 
 		var status = document.createElement("td");
-		spn.textContent = current.status;
+		status.textContent = current.status;
+
+		var location = document.createElement("td");
+		location.textContent = current.status;
 
 		status.append(spn);
 		tar.appendChild(name);
 		tar.appendChild(status);
+		tar.appendChild(location);
 		display.classList.add("table");
 		display.appendChild(tar);
 	}
