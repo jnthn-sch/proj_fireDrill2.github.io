@@ -407,7 +407,27 @@ function buildingChange(){
 
 	var floor = document.getElementById("floor");
 	removeAllChildNodes(floor);
+
+	var quad = document.getElementById("quad");
+	removeAllChildNodes(quad);
 	
+	var idk = document.createElement('idk');
+	idk.append('idk');
+	quad.append(idk);
+	var NW = document.createElement('NW');
+	idk.append('NW');
+	quad.append(NW);
+	var NE = document.createElement('NE');
+	idk.append('NE');
+	quad.append(NE);
+	var SW = document.createElement('SW');
+	idk.append('SW');
+	quad.append(SW);
+	var SE =document.createElement('SE');
+	idk.append('SW');
+	quad.append(SW);
+
+
 	var LL = document.createElement('option');
 	LL.append('LL');
 	floor.appendChild(LL);
@@ -518,7 +538,7 @@ function updateJSON(){
 			headers: {"Authorization": "token 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",'Content-Type': 'application/json'}
     }).then(response => response.json())
 	.then(data => {
-	  console.log(data) // Prints result from `response.json()` in getRequest
+	  console.log(data) 
 	})
 	.catch(error => console.error(error))
 			
