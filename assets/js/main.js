@@ -465,10 +465,13 @@ function updateStatus(data){
 	removeAllChildNodes(display);
 	var title1 = document.createElement("th");
 	var title2 = document.createElement("th");
+	var title3 = document.createElement("th");
 	title1.textContent = "Employee Name";
 	title2.textContent = "Status";
+	title3.textContent = "Location";
 	display.appendChild(title1);
 	display.appendChild(title2);
+	display.appendChild(title3);
 	for (let i = 0; i < data.length; ++i){
 
 		var current = data[i];
