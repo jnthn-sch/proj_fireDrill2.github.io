@@ -412,7 +412,7 @@ function buildingChange(){
 	removeAllChildNodes(quad);
 	
 	var idk = document.createElement('option');
-	idk.append('idk');
+	idk.append('unsure');
 	quad.appendChild(idk);
 	var NW = document.createElement('option');
 	NW.append('NW');
@@ -424,8 +424,8 @@ function buildingChange(){
 	SW.append('SW');
 	quad.appendChild(SW);
 	var SE =document.createElement('option');
-	SE.append('SW');
-	quad.appendChild(SW);
+	SE.append('SE');
+	quad.appendChild(SE);
 
 
 	var LL = document.createElement('option');
