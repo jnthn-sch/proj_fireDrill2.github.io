@@ -2,19 +2,19 @@
     {
         "name":"Jonathan Schoelwer",
         "status":"Unknown",
-        "Location":"Unknown"
+        "location":"Unknown"
         
     },
     {
         "name":"Logan Tumminello",
         "status":"Needs Help",
-        "Location":" Tower 3 NW"
+        "location":" Tower 3 NW"
 
     },
     {
         "name":"Mason Lumley",
         "status":"Unknown",
-        "Location":"Unknown"
+        "location":"Unknown"
 
     }
 ]

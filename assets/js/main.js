@@ -486,7 +486,7 @@ function updateStatus(data){
 		status.textContent = current.status;
 
 		var location = document.createElement("td");
-		location.textContent = current.status;
+		location.textContent = current.location;
 
 		status.append(spn);
 		tar.appendChild(name);
