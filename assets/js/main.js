@@ -486,6 +486,12 @@ function updateStatus(data){
 
 		var status = document.createElement("td");
 		status.textContent = current.status;
+		
+		if (current.status  == "Needs Help"){
+			status.style("font-color = #FF0000");
+
+		}
+		
 
 		var location = document.createElement("td");
 		location.textContent = current.location;
