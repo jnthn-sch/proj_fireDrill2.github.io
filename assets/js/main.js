@@ -547,7 +547,7 @@ function updateJSON(){
 			}*/
 			fetch(jsonRequestURL, {
      		 method: 'POST',
-			headers: {'Content-Type': 'application/json'},//,'Origin':'https://jnthn-sch.github.io/'
+		
 			body: "jsonTxt="+JSON.stringify(jsonArr)
     }).then(response => response.json())
 	.then(data => {
