@@ -514,7 +514,7 @@ function useXHR(){
 }
 
 //AKa1IlSoNQu2ChkfuvsZwz
-function updateJSON(th){
+function updateJSON(){
 
 	var xhr = new XMLHttpRequest();
     var jsonRequestURL = "https://jsonendpoint.com/firedrill24/endpoint/24";
@@ -524,7 +524,7 @@ function updateJSON(th){
    		 {
 				//jsonArr.push({"name":"Cody", "status":"Safe","location":"Unknown"});
 			var jsonArr = JSON.parse(xhr.responseText);
-/*
+
 			for(var i =0; i < jsonArr.length; i++){
 				var innerArr = JSON.parse(jsonArr);
 				if(innerArr.name = nam){
@@ -547,7 +547,7 @@ function updateJSON(th){
 					var s = JSON.stringify(innerArr);
 					jsonArr[i] = s;
 				}
-			}*/
+			}
 		
 			fetch(jsonRequestURL, {
      		 method: 'POST',
@@ -574,6 +574,6 @@ function updateJSON(th){
 
 useXHR();
 
-function updateStatus(statu){
+function updateSta(statu){
 	stat = statu;
 }
