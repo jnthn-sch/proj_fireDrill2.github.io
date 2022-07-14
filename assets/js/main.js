@@ -488,7 +488,7 @@ function updateStatus(data){
 		status.textContent = current.status;
 		
 		if (current.status  == "Needs Help"){
-			status.style("font-color = #FF0000");
+			status.style.color = "#FF0000"
 
 		}
 		
