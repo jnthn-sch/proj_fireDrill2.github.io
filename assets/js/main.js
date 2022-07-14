@@ -545,8 +545,6 @@ function updateJSON(){
 						loc += floor.value;
 						loc+=" ";
 						loc +=quad.value;
-					}else{
-						loc = "Unknown";
 					}
 					innerArr.location = loc;
 					
@@ -588,4 +586,8 @@ function updateSta(statu){
 function updateName(){
 	var n = document.getElementById("userN");
 	nam = n.value;
+}
+
+function updateLoc(l){
+	loc = l;
 }
