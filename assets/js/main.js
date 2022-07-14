@@ -587,6 +587,10 @@ function updateName(){
 	var n = document.getElementById("userN");
 	nam = n.value;
 }
+function updateN(){
+	var n = document.getElementById("userr");
+	nam = n.value;
+}
 
 function updateLoc(l){
 	loc = l;
