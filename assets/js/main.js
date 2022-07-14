@@ -506,6 +506,7 @@ function useXHR(){
 	});
 
 	const url = "https://api.npoint.io/35df3c7121a3cd266ecf";
+	xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
 	xhr.open("GET",url, true);
 	
 	xhr.send();
@@ -524,7 +525,7 @@ function updateJSON(){
 			jsonArr = JSON.parse(xhr.responseText);
 
 			jsonArr.push({"name":"Cody", "status":"Safe"});
-			
+			xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
 			/*
    			xhr.open("POST", jsonRequestURL, true);
 			xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest'); 
