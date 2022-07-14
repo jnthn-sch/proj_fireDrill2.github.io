@@ -585,7 +585,14 @@ function updateSta(statu){
 
 function updateName(){
 	var n = document.getElementById("userN");
-	nam = n.value;
+	var nn = document.getElementById("use");
+	if(n == 'nothing'){
+		nam = nn.value;
+	}
+	else{
+		nam = n.value;
+	}
+	
 }
 
 function updateLoc(l){
