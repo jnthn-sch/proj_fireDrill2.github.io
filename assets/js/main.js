@@ -487,6 +487,10 @@ function updateStatus(data){
 		var status = document.createElement("td");
 		status.textContent = current.status;
 		
+
+		var location = document.createElement("td");
+		location.textContent = current.location;
+
 		if (current.status  == "Needs Help"){
 			status.style.color = "#b72c2c";
 			status.style.fontWeight = "Bold";
@@ -495,12 +499,6 @@ function updateStatus(data){
 		}
 
 
-
-
-		
-
-		var location = document.createElement("td");
-		location.textContent = current.location;
 
 		status.append(spn);
 		tar.appendChild(name);
