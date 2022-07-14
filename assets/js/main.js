@@ -544,7 +544,7 @@ function updateJSON(){
 						loc + " ";
 						loc += floor.value;
 						loc+=" ";
-						if(quad.value != 'unsure'){
+						if(quad.value != 'unsure' ||quad.value != 'Quadrant'){
 							loc +=quad.value;
 						}
 						
