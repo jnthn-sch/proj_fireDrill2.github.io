@@ -588,6 +588,6 @@ function updateName(){
 	nam = n.value;
 }
 
-function updateLoc(){
+function updateLoc(l){
 	loc = l;
 }
