@@ -488,10 +488,13 @@ function updateStatus(data){
 		status.textContent = current.status;
 		
 		if (current.status  == "Needs Help"){
-			status.style.color = "#b72c2c"
-			status.style.fontWeight = "4pt"
-	
+			status.style.color = "#b72c2c";
+			status.style.fontWeight = "Bold";
+			location.style.color = "#b72c2c";
+			location.style.fontWeight = "Bold";
 		}
+
+
 
 
 		
