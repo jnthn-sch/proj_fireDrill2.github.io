@@ -505,8 +505,8 @@ function useXHR(){
 
 	});
 
-	const url = "jsons/status.json";
-	xhr.open("GET",url);
+	const url = "https://json.extendsclass.com/bin/b3ca09d9a358";
+	xhr.open("GET",url, true);
 	xhr.send();
 
 }
