@@ -506,9 +506,9 @@ function useXHR(){
 	});
 
 	const url = "https://api.npoint.io/35df3c7121a3cd266ecf";
-	xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
-	xhr.open("GET",url, true);
 	
+	xhr.open("GET",url, true);
+	xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
 	xhr.send();
 
 }
