@@ -546,9 +546,9 @@ function updateJSON(){
 
 			}*/
 			fetch(jsonRequestURL, {
-     		 method: 'post',
-     		 body: "jsonTxt="+JSON.stringify(jsonArr),
-			headers: {'Content-Type': 'application/json'}
+     		 method: 'POST',
+			headers: {'Content-Type': 'application/json'},
+			body: "jsonTxt="+JSON.stringify(jsonArr)
     }).then(response => response.json())
 	.then(data => {
 	  console.log(data) 
