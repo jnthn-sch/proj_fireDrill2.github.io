@@ -529,7 +529,7 @@ function updateJSON(){
 			for(var i =0; i < jsonArr.length; i++){
 				var temp = JSON.stringify(jsonArr[i]);
 				var innerArr = JSON.parse(temp);
-				if(innerArr.name = nam){
+				if(innerArr.name == nam){
 
 					innerArr.status = stat;
 					var loc;
@@ -546,8 +546,8 @@ function updateJSON(){
 						loc = "Unknown";
 					}
 					innerArr.location = loc;
-					var s = JSON.stringify(innerArr);
-					jsonArr[i] = s;
+					
+					jsonArr[i] = innerArr;
 				}
 			}
 		
