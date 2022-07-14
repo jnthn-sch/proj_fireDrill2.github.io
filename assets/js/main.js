@@ -490,8 +490,7 @@ function updateStatus(data){
 		if (current.status  == "Needs Help"){
 			status.style.color = "#b72c2c"
 			status.style.fontWeight = "4pt"
-			location.style.color = "#b72c2c"
-			location.style.fontWeight = "4pt"
+	
 		}
 
 
