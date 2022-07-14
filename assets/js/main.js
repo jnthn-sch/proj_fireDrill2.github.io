@@ -527,7 +527,8 @@ function updateJSON(){
 			var jsonArr = JSON.parse(xhr.responseText);
 
 			for(var i =0; i < jsonArr.length; i++){
-				var innerArr = JSON.parse(jsonArr[i]);
+				var temp = JSON.stringify(jsonArr[i]);
+				var innerArr = JSON.parse(temp);
 				if(innerArr.name = nam){
 
 					innerArr.status = stat;
