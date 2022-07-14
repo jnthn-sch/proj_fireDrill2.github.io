@@ -516,7 +516,7 @@ function useXHR(){
 function updateJSON(){
 
 	var xhr = new XMLHttpRequest();
-    var jsonRequestURL = "https://jnthn-sch.github.io/proj_fireDrill2.github.io/jsons/status.json";
+    var jsonRequestURL = "https://api.npoint.io/35df3c7121a3cd266ecf";
 	xhr.open("GET", jsonRequestURL,true);
 	xhr.addEventListener('load', ()=>{
 		if(xhr.readyState == 4 && xhr.status == 200)
