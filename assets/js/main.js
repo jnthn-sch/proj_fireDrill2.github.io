@@ -505,13 +505,14 @@ function useXHR(){
 
 	});
 
-	const url = "https://json.extendsclass.com/bin/b3ca09d9a358";
+	const url = "https://api.npoint.io/8ef12e251023797b2c08";
 	xhr.open("GET",url, true);
+	xhr.setRequestHeader("$2b$10$DLZ/4tcvwqMqng9AS.XoL.uzLJ237FAbkSKFB6uGJTA551d18/mHG", "<YOUR_API_KEY>");
 	xhr.send();
 
 }
 
-
+//AKa1IlSoNQu2ChkfuvsZwz
 function updateJSON(){
 
 	var xhr = new XMLHttpRequest();
