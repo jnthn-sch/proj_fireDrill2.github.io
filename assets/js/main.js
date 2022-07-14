@@ -528,7 +528,7 @@ function updateJSON(){
 
 			for(var i =0; i < jsonArr.length; i++){
 				var temp = JSON.stringify(jsonArr[i]);
-				var innerArr = JSON.parse(temp);
+				var innerArr = jsonArr[i];
 				if(innerArr.name == nam){
 
 					innerArr.status = stat;
@@ -555,7 +555,7 @@ function updateJSON(){
      		 method: 'POST',
 		
 			//body: JSON.stringify(jsonArr)
-			body: JSON.stringify('[{"name":"Jonathan Schoelwer","status":"Safe","location":"Virtual"},{"name":"Logan Tumminello","status":"Needs Help","location":" Tower 3 NW"},{"name":"Mason Lumley","status":"Unknown","location":"Unknown"},{"name":"Charles Koch","status":"Safe","location":"Unknown"}]')
+			body: '[{"name":"Jonathan Schoelwer","status":"Safe","location":"Virtual"},{"name":"Logan Tumminello","status":"Needs Help","location":" Tower 3 NW"},{"name":"Mason Lumley","status":"Unknown","location":"Unknown"},{"name":"Charles Koch","status":"Safe","location":"Unknown"}]'
     }).then(response => response.json())
 	.then(data => {
 	  console.log(data) 
