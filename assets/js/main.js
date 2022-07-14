@@ -551,9 +551,9 @@ function updateJSON(){
 					var quad = document.getElementById("quad");
 					if(building.value != "Building"){
 						loc = building.value;
-						loc + " ";
+						loc += " ";
 						loc += floor.value;
-						loc+=" ";
+						loc += " ";
 						if(quad.value != 'unsure' && quad.value != 'Quadrant'){
 							loc +=quad.value;
 						}
