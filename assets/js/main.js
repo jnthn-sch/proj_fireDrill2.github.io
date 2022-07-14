@@ -529,6 +529,7 @@ function updateJSON(){
 			for(var i =0; i < jsonArr.length; i++){
 				var temp = JSON.stringify(jsonArr[i]);
 				var innerArr = jsonArr[i];
+				console.log(innerArr.name + " " + nam);
 				if(innerArr.name == nam){
 
 					innerArr.status = stat;
