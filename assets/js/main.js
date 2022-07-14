@@ -414,7 +414,7 @@ function buildingChange(){
 	removeAllChildNodes(quad);
 
 	var q = document.createElement('option');
-	q.append('Quardrant');
+	q.append('Quadrant');
 	quad.appendChild(q);
 	
 	var idk = document.createElement('option');
@@ -544,7 +544,7 @@ function updateJSON(){
 						loc + " ";
 						loc += floor.value;
 						loc+=" ";
-						if(quad.value != 'unsure' &&quad.value != 'Quadrant'){
+						if(quad.value != 'unsure' && quad.value != 'Quadrant'){
 							loc +=quad.value;
 						}
 						
