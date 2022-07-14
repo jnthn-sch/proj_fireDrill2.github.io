@@ -524,7 +524,7 @@ function updateJSON(th){
    		 {
 				//jsonArr.push({"name":"Cody", "status":"Safe","location":"Unknown"});
 			var jsonArr = JSON.parse(xhr.responseText);
-
+/*
 			for(var i =0; i < jsonArr.length; i++){
 				var innerArr = JSON.parse(jsonArr);
 				if(innerArr.name = nam){
@@ -547,7 +547,7 @@ function updateJSON(th){
 					var s = JSON.stringify(innerArr);
 					jsonArr[i] = s;
 				}
-			}
+			}*/
 		
 			fetch(jsonRequestURL, {
      		 method: 'POST',
