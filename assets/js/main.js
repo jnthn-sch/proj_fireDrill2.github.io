@@ -583,15 +583,8 @@ function updateSta(statu){
 }
 
 
-function updateName(){
-	var n = document.getElementById("userN");
-	var nn = document.getElementById("use");
-	if(n == 'nothing'){
-		nam = nn.value;
-	}
-	else{
-		nam = n.value;
-	}
+function updateName(th){
+	nam = th.options[th.selectedIndex].innerHTML;
 	
 }
 
