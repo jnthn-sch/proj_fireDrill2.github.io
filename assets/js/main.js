@@ -544,7 +544,10 @@ function updateJSON(){
 						loc + " ";
 						loc += floor.value;
 						loc+=" ";
-						loc +=quad.value;
+						if(quad.value != 'unsure'){
+							loc +=quad.value;
+						}
+						
 					}
 					innerArr.location = loc;
 					
