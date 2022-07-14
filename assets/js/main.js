@@ -3,7 +3,7 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
-
+var stat ="Unknown"
 (function($) {
 
 	var	$window = $(window),
@@ -514,7 +514,7 @@ function useXHR(){
 }
 
 //AKa1IlSoNQu2ChkfuvsZwz
-function updateJSON(){
+function updateJSON(th){
 
 	var xhr = new XMLHttpRequest();
     var jsonRequestURL = "https://jsonendpoint.com/firedrill24/endpoint/24";
@@ -522,29 +522,33 @@ function updateJSON(){
 	xhr.addEventListener('load', ()=>{
 		if(xhr.readyState == 4 && xhr.status == 200)
    		 {
-			jsonArr = JSON.parse(xhr.responseText);
+				//jsonArr.push({"name":"Cody", "status":"Safe","location":"Unknown"});
+			var jsonArr = JSON.parse(xhr.responseText);
 
-			jsonArr.push({"name":"Cody", "status":"Safe","location":"Unknown"});
-			/*
-			
-   			xhr.open("POST", jsonRequestURL, true);
-			xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest'); 
-			xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
-    		xhr.setRequestHeader('Access-Control-Allow-Methods' , 'POST, OPTIONS')
-			xhr.send("jsonTxt="+JSON.stringify(jsonArr));
-			useXHR();
-			
-			return {
-				statusCode: 200,
-				headers: {
-				  // Required for CORS support to work
-				  'Access-Control-Allow-Origin': '*',
-				  // Required for cookies, authorization headers with HTTPS 
-				  'Access-Control-Allow-Credentials': true
+			for(var i =0; i < jsonArr.length; i++){
+				var innerArr = JSON.parse(jsonArr);
+				if(innerArr.name = nam){
+
+					innerArr.status = stat;
+					var loc;
+					var floor = document.getElementById("floor");
+					var building = document.getElementById("building");
+					var quad = document.getElementById("quad");
+					if(building.value != "Building"){
+						loc = building.value;
+						loc + " ";
+						loc += floor.value;
+						loc+=" ";
+						loc +=quad.value;
+					}else{
+						loc = "Unknown";
+					}
+					innerArr.location = loc;
+					var s = JSON.stringify(innerArr);
+					jsonArr[i] = s;
 				}
-
-
-			}*/
+			}
+		
 			fetch(jsonRequestURL, {
      		 method: 'POST',
 		
@@ -569,3 +573,7 @@ function updateJSON(){
 }
 
 useXHR();
+
+function updateStatus(statu){
+	stat = statu;
+}

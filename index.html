@@ -30,8 +30,8 @@
 						<nav>
 							<ul>
 								
-								<li><a href="#safe" class="button icon solid fa-check">I'm Safe</a></li>
-								<li><a href="#help" class="button main icon solid fa-exclamation">Help Me</a></li>
+								<li><a href="#safe" class="button icon solid fa-check" onclick="updateStatus('Needs Help')">I'm Safe</a></li>
+								<li><a href="#help" class="button main icon solid fa-exclamation" onclick="updateStatus('Safe')">Help Me</a></li>
 							</ul>
 					
 						</nav>
@@ -91,7 +91,7 @@
 								
 							
 								
-								<li><a id="submit" class="button1 icon solid fa-check" style="visibility:hidden;" onclick="updateJSON()" href="#onWay" >Submit</a></li>
+								<li><a id="submit" class="button1 icon solid fa-check" style="visibility:hidden;" onclick="updateJSON(this)" href="#onWay" >Submit</a></li>
 
 						
 				
