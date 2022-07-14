@@ -5,6 +5,7 @@
 */
 var stat ="Unknown";
 var nam = "Mason Lumley";
+var loc = "Unkown";
 (function($) {
 
 	var	$window = $(window),
@@ -534,7 +535,7 @@ function updateJSON(){
 				if(innerArr.name == nam){
 
 					innerArr.status = stat;
-					var loc;
+					
 					var floor = document.getElementById("floor");
 					var building = document.getElementById("building");
 					var quad = document.getElementById("quad");

@@ -30,8 +30,8 @@
 						<nav>
 							<ul>
 								
-								<li><a href="#safe" class="button icon solid fa-check" onclick="updateSta('Needs Help')">I'm Safe</a></li>
-								<li><a href="#help" class="button main icon solid fa-exclamation" onclick="updateSta('Safe')">Help Me</a></li>
+								<li><a href="#safe" class="button icon solid fa-check" onclick="updateSta()">I'm Safe</a></li>
+								<li><a href="#help" class="button main icon solid fa-exclamation" onclick="updateSta('Needs Help')">Help Me</a></li>
 							</ul>
 					
 						</nav>
@@ -55,7 +55,7 @@
 						<ul class="actions">
 							
 							<li ><a class="button icon solid fa-house-circle-exclamation"  
-									onclick="quad.style.visibility='hidden'; building.style.visibility='hidden'; floor.style.visibility='hidden'; submit.style.visibility='hidden'; hh.style.visibility='hidden';" href="#noted">
+									onclick= "quad.style.visibility='hidden'; building.style.visibility='hidden'; floor.style.visibility='hidden'; submit.style.visibility='hidden'; hh.style.visibility='hidden';  updateLoc('Virtual')" href="#noted" >
 									I'm working remote
 								</a></li>
 							<li><a for = "Location" class="button main icon solid fa-building-circle-exclamation"  
@@ -107,9 +107,9 @@
 										<option value="Logan Tumminello"> Logan Tumminello</option>
 										<option value="Jonathan Schoelwer"> Jonathan Schoelwer</option>
 									</select>
-								<a id="submitSafeOffice"  onclick="updateJSON()" class="button icon solid fa-check" href="#noted">Yes, I'm safe at the Office</a>
+								<a id="submitSafeOffice"  onclick="updateJSON();updateLoc('At The Office')" class="button icon solid fa-check" href="#noted">Yes, I'm safe at the Office</a>
 								
-								<a id="submitSafeHome"	class="button icon solid fa-check" href="#noted">Yes, I'm safe at Home</a>
+								<a id="submitSafeHome"	class="button icon solid fa-check" href="#noted" onclick="updateLoc('Virtual')">Yes, I'm safe at Home</a>
 							</article>
 					
 						<!-- Information -->
