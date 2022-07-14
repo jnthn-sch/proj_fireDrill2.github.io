@@ -521,11 +521,11 @@ function updateJSON(){
 	xhr.open("GET", jsonRequestURL,true);
 	xhr.addEventListener('load', ()=>{
 		if(xhr.readyState == 4 && xhr.status == 200)
-   		 {/*
+   		 {
 			jsonArr = JSON.parse(xhr.responseText);
 
 			jsonArr.push({"name":"Cody", "status":"Safe"});
-			xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
+			/*
 			
    			xhr.open("POST", jsonRequestURL, true);
 			xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest'); 
