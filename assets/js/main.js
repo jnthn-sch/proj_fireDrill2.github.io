@@ -508,7 +508,7 @@ function useXHR(){
 	const url = "https://api.npoint.io/35df3c7121a3cd266ecf";
 	
 	xhr.open("GET",url, true);
-	xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
+//	xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
 	xhr.send();
 
 }
@@ -526,7 +526,7 @@ function updateJSON(){
 
 			jsonArr.push({"name":"Cody", "status":"Safe"});
 			xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
-			/*
+			
    			xhr.open("POST", jsonRequestURL, true);
 			xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest'); 
 			xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
@@ -544,7 +544,7 @@ function updateJSON(){
 				}
 
 
-			}*/
+			}/*
 			fetch('https://jnthn-sch.github.io/proj_fireDrill2.github.io/jsons/status.json?access_token=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', {
      		 method: 'post',
      		 body: "jsonTxt="+JSON.stringify(jsonArr),
@@ -557,15 +557,15 @@ function updateJSON(){
 			
 		}
 	}
-	);
+	);*/
 	
 
 	
-	xhr.send();
+	//xhr.send();
 
+}
 	
-	
-		
+});
 
 	
 }
