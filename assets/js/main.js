@@ -440,7 +440,7 @@ function buildingChange(){
 
 	var flLimit;
 
-	if(building.value == 'Tower'){flLimit = 9;}
+	if(building.value == 'Tower '){flLimit = 9;}
 	else{flLimit = 4;}
 
 
