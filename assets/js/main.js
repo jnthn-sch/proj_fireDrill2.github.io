@@ -4,6 +4,7 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 var stat ="Unknown";
+var nam = "Mason Lumley";
 (function($) {
 
 	var	$window = $(window),
@@ -576,4 +577,10 @@ useXHR();
 
 function updateSta(statu){
 	stat = statu;
+}
+
+
+function updateName(){
+	var n = document.getElementById("userName");
+	nam = n.value;
 }
