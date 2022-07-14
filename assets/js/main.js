@@ -505,9 +505,9 @@ function useXHR(){
 
 	});
 
-	const url = "https://api.npoint.io/8ef12e251023797b2c08";
+	const url = "https://api.npoint.io/35df3c7121a3cd266ecf";
 	xhr.open("GET",url, true);
-	xhr.setRequestHeader("$2b$10$DLZ/4tcvwqMqng9AS.XoL.uzLJ237FAbkSKFB6uGJTA551d18/mHG", "<YOUR_API_KEY>");
+	
 	xhr.send();
 
 }
