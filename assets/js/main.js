@@ -505,7 +505,7 @@ function useXHR(){
 
 	});
 
-	const url = "https://api.npoint.io/35df3c7121a3cd266ecf";
+	const url = "https://jsonendpoint.com/firedrill24/endpoint/24";
 	
 	xhr.open("GET",url, true);
 //	xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
@@ -517,7 +517,7 @@ function useXHR(){
 function updateJSON(){
 
 	var xhr = new XMLHttpRequest();
-    var jsonRequestURL = "https://api.npoint.io/35df3c7121a3cd266ecf";
+    var jsonRequestURL = "https://jsonendpoint.com/firedrill24/endpoint/24";
 	xhr.open("GET", jsonRequestURL,true);
 	xhr.addEventListener('load', ()=>{
 		if(xhr.readyState == 4 && xhr.status == 200)
