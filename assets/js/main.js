@@ -547,7 +547,7 @@ function updateJSON(){
 			}*/
 			fetch(jsonRequestURL, {
      		 method: 'POST',
-			headers: {'Content-Type': 'application/json'},
+			headers: {'Content-Type': 'application/json','Access-Control-Allow-Origin': '*'},
 			body: "jsonTxt="+JSON.stringify(jsonArr)
     }).then(response => response.json())
 	.then(data => {
