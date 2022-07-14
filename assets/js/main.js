@@ -4,7 +4,7 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 var stat ="Unknown";
-var na = "Mason Lumley";
+var nam = "Mason Lumley";
 (function($) {
 
 	var	$window = $(window),
@@ -529,7 +529,7 @@ function updateJSON(){
 			for(var i =0; i < jsonArr.length; i++){
 				//var temp = JSON.stringify(jsonArr[i]);
 				var innerArr = jsonArr[i];
-				var nam = document.getElementById("userName");
+				
 				console.log(innerArr.name + " " + nam);
 				if(innerArr.name == nam){
 
@@ -585,6 +585,6 @@ function updateSta(statu){
 
 
 function updateName(){
-	var n = document.getElementById("userName");
+	var n = document.getElementById("userN");
 	nam = n.value;
 }
