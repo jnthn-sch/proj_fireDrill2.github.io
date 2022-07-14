@@ -44,7 +44,7 @@
 						<article id="help">
 							<h2 class="major">Where are you </br> located?</h2>
 							<h3>What is your name?</h3>
-									<select title="userN" id="userN" onchange="updateName(this)">
+									<select title="userN" id="userN" onchange="updateName()">
 										<option value="nothing"> </option>
 										<option value="Mason Lumley"> Mason Lumley</option>
 										<option value="Logan Tumminello"> Logan Tumminello</option>
@@ -101,7 +101,7 @@
 							<article id="safe">
 								<h2 class="major">Are You Sure?</h2>
 								<h3>What is your name?</h3>
-									<select title="use" id="use" onchange="updateName(this)" >
+									<select title="userN" id="userN" onchange="updateName()" >
 										<option value="nothing"> </option>
 										<option value="Mason Lumley"> Mason Lumley</option>
 										<option value="Logan Tumminello"> Logan Tumminello</option>
@@ -109,7 +109,7 @@
 									</select>
 								<a id="submitSafeOffice"  onclick="updateLoc('At The Office'); updateJSON()" class="button icon solid fa-check" href="#noted">Yes, I'm safe at the Office</a>
 								
-								<a id="submitSafeHome"	class="button icon solid fa-check" href="#noted" onclick="updateLoc('Virtual'); updateJSON()">Yes, I'm safe at Home</a>
+								<a id="submitSafeHome"	class="button icon solid fa-check" href="#noted" onclick="updateLoc('Virtual');updateJSON()">Yes, I'm safe at Home</a>
 							</article>
 					
 						<!-- Information -->

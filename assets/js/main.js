@@ -583,11 +583,11 @@ function updateSta(statu){
 }
 
 
-function updateName(th){
-	nam = th.options[th.selectedIndex].innerHTML;
-	
+function updateName(){
+	var n = document.getElementById("userN");
+	nam = n.value;
 }
 
-function updateLoc(l){
+function updateLoc(){
 	loc = l;
 }
