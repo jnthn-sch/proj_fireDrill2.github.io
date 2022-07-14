@@ -414,7 +414,7 @@ function buildingChange(){
 	removeAllChildNodes(quad);
 
 	var q = document.createElement('option');
-	q.append('quad.value != 'unsure'');
+	q.append('Quardrant');
 	quad.appendChild(q);
 	
 	var idk = document.createElement('option');
