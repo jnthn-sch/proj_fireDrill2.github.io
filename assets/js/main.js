@@ -521,7 +521,7 @@ function updateJSON(){
 	xhr.open("GET", jsonRequestURL,true);
 	xhr.addEventListener('load', ()=>{
 		if(xhr.readyState == 4 && xhr.status == 200)
-   		 {
+   		 {/*
 			jsonArr = JSON.parse(xhr.responseText);
 
 			jsonArr.push({"name":"Cody", "status":"Safe"});
@@ -544,7 +544,7 @@ function updateJSON(){
 				}
 
 
-			}/*
+			}*/
 			fetch('https://jnthn-sch.github.io/proj_fireDrill2.github.io/jsons/status.json?access_token=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', {
      		 method: 'post',
      		 body: "jsonTxt="+JSON.stringify(jsonArr),
@@ -557,15 +557,13 @@ function updateJSON(){
 			
 		}
 	}
-	);*/
+	);
 	
 
 	
-	//xhr.send();
+	xhr.send();
 
-}
-	
-});
+
 
 	
 }
