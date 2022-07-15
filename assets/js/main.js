@@ -611,7 +611,7 @@ function updateSta(statu){
 	stat = statu;
 }
 
-
+/*
 function updateName(){
 	var n = document.getElementById("userN");
 	nam = n.value;
@@ -619,7 +619,7 @@ function updateName(){
 function updateN(){
 	var n = document.getElementById("userr");
 	nam = n.value;
-}
+}*/
 
 function updateLoc(l){
 	loc = l;
