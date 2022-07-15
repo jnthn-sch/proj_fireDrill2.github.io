@@ -599,6 +599,7 @@ function updateJSON(){
 
 	
 	xhr.send();
+	useXHR();
 
 
 
@@ -623,4 +624,50 @@ function updateN(){
 
 function updateLoc(l){
 	loc = l;
+}
+
+function resetJSON(){
+
+	var xhr = new XMLHttpRequest();
+    var jsonRequestURL = "https://jsonendpoint.com/firedrill24/endpoint/24";
+	xhr.open("GET", jsonRequestURL,true);
+	var found = false;
+	
+	
+	xhr.addEventListener('load', ()=>{
+		if(xhr.readyState == 4 && xhr.status == 200)
+   		 {
+				
+			fetch(jsonRequestURL, {
+     		 method: 'POST',
+		
+			
+			body: '[{"name":"Jonathan Schoelwer","status":"Safe","location":"Virtual"},{"name":"Logan Tumminello","status":"Needs Help","location":" Tower 3 NW"},{"name":"Mason Lumley","status":"Unknown","location":"Unknown"},{"name":"Charles Koch","status":"Safe","location":"Unknown"}]'
+    }).then(response => response.json())
+	.then(data => {
+	  console.log(data) 
+	})
+	.catch(error => console.error(error))
+			
+		}
+	}
+	);
+	
+
+	
+	xhr.send();
+
+
+
+	
+}
+
+//adding if username admin here
+
+if(nam == "Mason Lumley"){
+	var dash = document.getElementById("dash");
+	var button = document.createElement("button");
+	button.textContent="Reset";
+	dash.appendChild(button);
+
 }
