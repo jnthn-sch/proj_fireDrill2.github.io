@@ -544,7 +544,7 @@ function updateJSON(){
 	
 	xhr.addEventListener('load', ()=>{
 		if(xhr.readyState == 4 && xhr.status == 200)
-   		 {
+   		 {/*
 				//jsonArr.push({"name":"Cody", "status":"Safe","location":"Unknown"});
 			var jsonArr = JSON.parse(xhr.responseText);
 			var floor = document.getElementById("floor");
@@ -578,9 +578,9 @@ function updateJSON(){
 			}
 			if(found == false && nam != "Unknown"){
 				//push to json
-				jsonArr.push('{"name":"'+nam+'","status":"'+stat+'","location":"'+loc+'"}');
+				jsonArr.push({"name":"'+nam+'","status":"'+stat+'","location":"'+loc+'"});
 			}
-		
+		*/
 			fetch(jsonRequestURL, {
      		 method: 'POST',
 		
