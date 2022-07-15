@@ -668,6 +668,7 @@ if(nam == "Mason Lumley"){
 	var dash = document.getElementById("dash");
 	var button = document.createElement("button");
 	button.textContent="Reset";
+	button.addEventListener("click", resetJSON);
 	dash.appendChild(button);
 
 }
