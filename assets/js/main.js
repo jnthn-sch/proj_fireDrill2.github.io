@@ -547,29 +547,30 @@ function updateJSON(){
    		 {
 				//jsonArr.push({"name":"Cody", "status":"Safe","location":"Unknown"});
 			var jsonArr = JSON.parse(xhr.responseText);
-
+			var floor = document.getElementById("floor");
+			var building = document.getElementById("building");
+			var quad = document.getElementById("quad");
+			if(building.value != "Building"){
+				loc = building.value;
+				loc += " ";
+				loc += floor.value;
+				loc += " ";
+				if(quad.value != 'unsure' && quad.value != 'Quadrant'){
+					loc +=quad.value;
+				}
+				
+			}
 			for(var i =0; i < jsonArr.length; i++){
 				//var temp = JSON.stringify(jsonArr[i]);
 				var innerArr = jsonArr[i];
 				
-				console.log(innerArr.name + " " + nam);
+				//console.log(innerArr.name + " " + nam);
 				if(innerArr.name.toLowerCase() == nam.toLowerCase()){
 					found = true;
 					innerArr.status = stat;
 					
-					var floor = document.getElementById("floor");
-					var building = document.getElementById("building");
-					var quad = document.getElementById("quad");
-					if(building.value != "Building"){
-						loc = building.value;
-						loc += " ";
-						loc += floor.value;
-						loc += " ";
-						if(quad.value != 'unsure' && quad.value != 'Quadrant'){
-							loc +=quad.value;
-						}
-						
-					}
+				
+					
 					innerArr.location = loc;
 					
 					jsonArr[i] = innerArr;
@@ -577,6 +578,7 @@ function updateJSON(){
 			}
 			if(found == false && nam != "Unknown"){
 				//push to json
+				jsonArr.push('{"name":"'+nam+'","status":"'+stat+'","location":"'+loc+'"}');
 			}
 		
 			fetch(jsonRequestURL, {
