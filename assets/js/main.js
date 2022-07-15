@@ -545,7 +545,7 @@ function updateJSON(){
 	xhr.addEventListener('load', ()=>{
 		if(xhr.readyState == 4 && xhr.status == 200)
    		 {
-			/*	//jsonArr.push({"name":"Cody", "status":"Safe","location":"Unknown"});
+				//jsonArr.push({"name":"Cody", "status":"Safe","location":"Unknown"});
 			var jsonArr = JSON.parse(xhr.responseText);
 			var floor = document.getElementById("floor");
 			var building = document.getElementById("building");
@@ -580,12 +580,12 @@ function updateJSON(){
 				//push to json
 				jsonArr.push({"name":nam,"status":stat,"location":loc});
 			}
-		*/
+		
 			fetch(jsonRequestURL, {
      		 method: 'POST',
 		
-			//body: JSON.stringify(jsonArr)
-			body: '[{"name":"Jonathan Schoelwer","status":"Safe","location":"Virtual"},{"name":"Logan Tumminello","status":"Needs Help","location":" Tower 3 NW"},{"name":"Mason Lumley","status":"Unknown","location":"Unknown"},{"name":"Charles Koch","status":"Safe","location":"Unknown"}]'
+			body: JSON.stringify(jsonArr)
+			//body: '[{"name":"Jonathan Schoelwer","status":"Safe","location":"Virtual"},{"name":"Logan Tumminello","status":"Needs Help","location":" Tower 3 NW"},{"name":"Mason Lumley","status":"Unknown","location":"Unknown"},{"name":"Charles Koch","status":"Safe","location":"Unknown"}]'
     }).then(response => response.json())
 	.then(data => {
 	  console.log(data) 
