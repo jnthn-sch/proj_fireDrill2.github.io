@@ -44,12 +44,13 @@
 						<article id="help">
 							<h2 class="major">Where are you </br> located?</h2>
 							<h3>What is your name?</h3>
-									<select title="userN" id="userN" onchange="updateName()">
+									<input type="text" id="fName" onchange="updateN()">
+									<!-- <select title="userN" id="userN" onchange="updateName()">
 										<option value="nothing"> </option>
 										<option value="Mason Lumley"> Mason Lumley</option>
 										<option value="Logan Tumminello"> Logan Tumminello</option>
 										<option value="Jonathan Schoelwer"> Jonathan Schoelwer</option>
-									</select>
+									</select>-->
 						<ul>
 							
 						<ul class="actions">
@@ -101,12 +102,13 @@
 							<article id="safe">
 								<h2 class="major">Are You Sure?</h2>
 								<h3>What is your name?</h3>
-									<select title="userr" id="userr" onchange="updateN()" >
+									<input type="text" id="f2Name" onchange="updateN()">
+								<!--	<select title="userr" id="userr" onchange="updateN()" >
 										<option value="nothing"> </option>
 										<option value="Mason Lumley"> Mason Lumley</option>
 										<option value="Logan Tumminello"> Logan Tumminello</option>
 										<option value="Jonathan Schoelwer"> Jonathan Schoelwer</option>
-									</select>
+									</select>-->
 								<a id="submitSafeOffice"  onclick="updateLoc('At The Office'); updateJSON()" class="button icon solid fa-check" href="#noted">Yes, I'm safe at the Office</a>
 								
 								<a id="submitSafeHome"	class="button icon solid fa-check" href="#noted" onclick="updateLoc('Virtual');updateJSON()">Yes, I'm safe at Home</a>
