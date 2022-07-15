@@ -9,8 +9,11 @@ var loc = "Unkown";
 var urll = document.URL;
 var urls = urll.split('?')[1];
 urls=urls.split('#')[0];
-var nam = urls.split('=')[0];
-console.log(urls);
+var nam = urls.split('=')[1];
+var fir = nam.split('-')[0];
+var lst = nam.split('-');
+nam = fir + " " + lst;
+console.log(nam);
 (function($) {
 
 	var	$window = $(window),
