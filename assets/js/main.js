@@ -4,8 +4,13 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 var stat ="Unknown";
-var nam = "Unknown";
+
 var loc = "Unkown";
+var urll = document.URL;
+var urls = urll.split('?')[1];
+urls=urls.split('#')[0];
+var nam = urls.split('=')[0];
+console.log(urls);
 (function($) {
 
 	var	$window = $(window),
@@ -532,11 +537,8 @@ function updateJSON(){
     var jsonRequestURL = "https://jsonendpoint.com/firedrill24/endpoint/24";
 	xhr.open("GET", jsonRequestURL,true);
 	var found = false;
-	var urll = document.URL;
-	var urls = urll.split('?')[0];
-	urls=urls.split('#')[0];
-	nam = urls.split('=')[0];
-	console.log(urls);
+	
+	
 	xhr.addEventListener('load', ()=>{
 		if(xhr.readyState == 4 && xhr.status == 200)
    		 {
