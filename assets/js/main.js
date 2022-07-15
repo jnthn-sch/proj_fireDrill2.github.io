@@ -4,7 +4,7 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 var stat ="Unknown";
-var nam = "Mason Lumley";
+var nam = "Unknown";
 var loc = "Unkown";
 (function($) {
 
@@ -531,6 +531,7 @@ function updateJSON(){
 	var xhr = new XMLHttpRequest();
     var jsonRequestURL = "https://jsonendpoint.com/firedrill24/endpoint/24";
 	xhr.open("GET", jsonRequestURL,true);
+	var found = false;
 	xhr.addEventListener('load', ()=>{
 		if(xhr.readyState == 4 && xhr.status == 200)
    		 {
@@ -543,7 +544,7 @@ function updateJSON(){
 				
 				console.log(innerArr.name + " " + nam);
 				if(innerArr.name.toLowerCase() == nam.toLowerCase()){
-
+					found = true;
 					innerArr.status = stat;
 					
 					var floor = document.getElementById("floor");
@@ -563,6 +564,9 @@ function updateJSON(){
 					
 					jsonArr[i] = innerArr;
 				}
+			}
+			if(found == false && nam != "Unknown"){
+				//push to json
 			}
 		
 			fetch(jsonRequestURL, {
