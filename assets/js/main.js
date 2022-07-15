@@ -9,9 +9,9 @@ var loc = "Unkown";
 var urll = document.URL;
 var urls = urll.split('?')[1];
 urls=urls.split('#')[0];
-var nam = urls.split('=')[1];
-var fir = nam.split('-')[0];
-var lst = nam.split('-');
+var glg= urls.split('=')[1];
+var fir = glg.split('-')[0];
+var lst = glg.split('-')[1];
 nam = fir + " " + lst;
 console.log(nam);
 (function($) {
