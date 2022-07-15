@@ -542,7 +542,7 @@ function updateJSON(){
 				var innerArr = jsonArr[i];
 				
 				console.log(innerArr.name + " " + nam);
-				if(innerArr.name == nam){
+				if(innerArr.name.toLowerCase() == nam.toLowerCase()){
 
 					innerArr.status = stat;
 					
