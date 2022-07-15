@@ -532,6 +532,11 @@ function updateJSON(){
     var jsonRequestURL = "https://jsonendpoint.com/firedrill24/endpoint/24";
 	xhr.open("GET", jsonRequestURL,true);
 	var found = false;
+	var urll = document.URL;
+	var urls = urll.split('?')[0];
+	urls=url.split('#')[0];
+	nam = urls.split('=')[0];
+	console.log(urls);
 	xhr.addEventListener('load', ()=>{
 		if(xhr.readyState == 4 && xhr.status == 200)
    		 {
