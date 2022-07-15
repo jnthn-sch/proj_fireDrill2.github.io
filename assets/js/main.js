@@ -578,7 +578,7 @@ function updateJSON(){
 			}
 			if(found == false && nam != "Unknown"){
 				//push to json
-				jsonArr.push({"name":"'+nam+'","status":"'+stat+'","location":"'+loc+'"});
+				jsonArr.push({"name":"\""+nam+"\"","status":"\""+stat+"\"","location":"\""+loc+"\""});
 			}
 		
 			fetch(jsonRequestURL, {
