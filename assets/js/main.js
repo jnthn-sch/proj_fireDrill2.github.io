@@ -642,7 +642,7 @@ function resetJSON(){
      		 method: 'POST',
 		
 			
-			body: '[{"name":"Jonathan Schoelwer","status":"Safe","location":"Virtual"},{"name":"Logan Tumminello","status":"Needs Help","location":" Tower 3 NW"},{"name":"Mason Lumley","status":"Unknown","location":"Unknown"},{"name":"Charles Koch","status":"Safe","location":"Unknown"}]'
+			body: '[{"name":"Charles Koch","status":"Safe","location":"Unknown"},{"name":"Logan Tumminello","status":"Needs Help","location":" Tower 3 NW"},{"name":"Mason Lumley","status":"Unknown","location":"Unknown"},{"name":"Jonathan Schoelwer","status":"Safe","location":"Virtual"}]'
     }).then(response => response.json())
 	.then(data => {
 	  console.log(data) 
